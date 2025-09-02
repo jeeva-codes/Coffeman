@@ -1,0 +1,116 @@
+{
+  "coffee": [
+    {
+      "id": 1,
+      "title": "Espresso",
+      "ratings": 4.7,
+      "price": 120,
+      "description": "A strong and bold single-shot espresso made from freshly ground beans.",
+      "keyword": "strong",
+      "image_url": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?cs=srgb&dl=pexels-chevanon-312418.jpg&fm=jpg"
+    },
+    {
+      "id": 2,
+      "title": "Cappuccino",
+      "ratings": 4.5,
+      "price": 150,
+      "description": "A classic Italian coffee with a balance of espresso, steamed milk, and foam.",
+      "keyword": "creamy",
+      "image_url": "https://hips.hearstapps.com/hmg-prod/images/directly-above-shot-of-cappuccino-served-on-table-royalty-free-image-769817517-1564602749.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
+    },
+    {
+      "id": 3,
+      "title": "Cold Brew",
+      "ratings": 4.6,
+      "price": 180,
+      "description": "Smooth and chilled coffee brewed for 12 hours, served over ice.",
+      "keyword": "cold",
+      "image_url": "https://umamigirl.com/wp-content/uploads/2023/03/French-Press-Cold-Brew-Umami-Girl-1200-2-768x768.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Latte",
+      "ratings": 4.4,
+      "price": 160,
+      "description": "A milky coffee with a light espresso base and soft foam topping.",
+      "keyword": "mild",
+      "image_url": "https://www.javapresse.com/cdn/shop/articles/JavaPresse_Coffee_Company_00665_x330_0c7b12c7-7b89-4577-962e-00e27d2e6886.webp?v=1713275153&width=780"
+    }
+  ],
+  "tea": [
+    {
+      "id": 5,
+      "title": "Masala Chai",
+      "ratings": 4.8,
+      "price": 60,
+      "description": "Spiced Indian tea with ginger, cardamom, and cinnamon.",
+      "keyword": "spicy",
+      "image_url": "https://media.istockphoto.com/id/1336601313/photo/top-view-of-indian-herbal-masala-chai-or-traditional-beverage-tea-with-milk-and-spices-kerala.jpg?s=612x612&w=0&k=20&c=txjXqXtu3_PcA0ztNxyNVXJ-YziORr2XnuHWIriNEKk="
+    },
+    {
+      "id": 6,
+      "title": "Green Tea",
+      "ratings": 4.2,
+      "price": 80,
+      "description": "Light and healthy tea rich in antioxidants, served hot.",
+      "keyword": "herbal",
+      "image_url": "https://media.nature.com/lw767/magazine-assets/d42473-023-00394-0/d42473-023-00394-0_26780454.jpg?as=webp"
+    },
+    {
+      "id": 7,
+      "title": "Lemon Iced Tea",
+      "ratings": 4.3,
+      "price": 90,
+      "description": "Chilled black tea with lemon and a touch of honey.",
+      "keyword": "refreshing",
+      "image_url": "https://yumeating.com/wp-content/uploads/2021/06/Iced-Green-Tea.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Chamomile Tea",
+      "ratings": 4.6,
+      "price": 100,
+      "description": "Calming herbal tea made from chamomile flowers.",
+      "keyword": "relaxing",
+      "image_url": "https://media.post.rvohealth.io/wp-content/uploads/2020/09/chamomile-tea-thumb.jpg"
+    }
+  ],
+  "cool_drinks": [
+    {
+      "id": 9,
+      "title": "Coca-Cola",
+      "ratings": 4.1,
+      "price": 40,
+      "description": "Classic fizzy cola beverage, served chilled.",
+      "keyword": "cola",
+      "image_url": "https://images.stockcake.com/public/b/a/5/ba51f1c9-d63f-47b9-a3fd-25b49672129c_large/coca-cola-pouring-moment-stockcake.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Sprite",
+      "ratings": 4.0,
+      "price": 40,
+      "description": "Lemon-lime flavored soft drink, caffeine-free and bubbly.",
+      "keyword": "lemon",
+      "image_url": "https://s7d1.scene7.com/is/image/mcdonalds/mcd-sprite-qa-0423:product-header-mobile?wid=829&hei=476&dpr=off"
+    },
+    {
+      "id": 11,
+      "title": "Mango Frooti",
+      "ratings": 4.4,
+      "price": 30,
+      "description": "Sweet and fruity mango drink loved by all ages.",
+      "keyword": "mango",
+      "image_url": "https://i0.wp.com/cookingfromheart.com/wp-content/uploads/2022/05/Homemade-Mango-Frooti-Recipe.jpg?w=684&ssl=1"
+    },
+    {
+      "id": 12,
+      "title": "Pepsi Black",
+      "ratings": 4.2,
+      "price": 45,
+      "description": "Zero-calorie, bold flavored cola for health-conscious drinkers.",
+      "keyword": "diet",
+      "image_url": "https://cdn.uengage.io/uploads/49314/image-981143-1723202977.jpeg"
+    }
+  ]
+}
