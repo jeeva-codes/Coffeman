@@ -31,11 +31,11 @@ const navigate=useNavigate()
             <p className='text-1xl text-amber-600 font-bold mt-1'>{proshow.keyword}</p>
         </div>
         <p className='text-lg font-medium mt-2 md:pl-20 lg:pl-25 '>⭐{proshow.ratings}</p>
-        <h3 className='text-2xl font-medium mt-2 md:pl-20 lg:pl-25'>Description</h3>
-        <p className='text-2xl mt-5 md:pl-25 ,pr-20 lg:pl-28 ,pr-25'>{proshow.description}</p>
+        <h3 className='text-lg font-medium mt-2 md:pl-20 lg:pl-25'>Description</h3>
+        <p className='text-lg mt-5 md:pl-25 ,pr-20 lg:pl-28 ,pr-25'>{proshow.description}</p>
     </div>
     </div>
-  <h1 className='text-3xl p-3 mt-3 md:pl-25 lg:pl-28'>Size</h1>
+  <h1 className='text-2xl p-3 mt-3 md:pl-25 lg:pl-28'>Size</h1>
   <div className='flex justify-center mt-5'>
      <button onClick={()=>setPricecal(1)} className='text-2xl p-2 w-25  border-1 focus:border-amber-700 focus:border-2'>S</button><br />
      <button onClick={()=>setPricecal(1.5)} className='text-2xl p-2 w-25 mr-5 ml-5 border-1 focus:border-amber-700 focus:border-2'>M</button><br />
