@@ -30,7 +30,7 @@ const {state,dispatch}=useContext(Productcontext)
                     </div>
                 </div>
             )
-        }) : <img className='m-auto' src="https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038.jpg" alt=""/>  }
+        }) : <div className='flex justify-center align-middle'><img className='m-auto' src="https://i.pinimg.com/736x/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038.jpg" alt=""/> </div>  }
        </div>
         
     </div>

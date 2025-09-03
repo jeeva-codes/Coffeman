@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { IoIosArrowBack } from "react-icons/io";
+import { useContext } from 'react';
+import { Productcontext } from '../Context';
 function Signup() {
 const navigate=useNavigate()
-
+  const {setLogin}=useContext(Productcontext)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -26,6 +28,9 @@ const navigate=useNavigate()
       .then((res) => {
         console.log('Registered:', res)
         // Optionally redirect or show success
+        setLogin(true)
+         sessionStorage.setItem('loginstatus',true)
+         alert("Successfully Registered!")
         navigate('/signin')
       })
       .catch((err) => {
@@ -88,7 +93,7 @@ const navigate=useNavigate()
           </div>
           <button type='submit' className='bg-[#54e330] p-1 text-amber-50 ml-25'>Signup</button>
         </form>
-        <p className='mt-4 text-[#E3E3E3]'>I already have an account</p>
+        <p className='mt-4 text-[#E3E3E3]'>I already have account ?</p>
         <Link to='/signin'>
           <button className='bg-[#30bce3] p-1 text-amber-50 mt-4 ml-25'>Sign in</button>
         </Link>

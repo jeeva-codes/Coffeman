@@ -14,31 +14,60 @@ function Order() {
         const ordershow=orderlocation.state.proshow||{}
         const ordercal=orderlocation.state.pricecal
         const [ordercount,setOrdercount]=useState(1)
+        const [paymentstatus,setPaymentstatus]=useState(false)
 
         //
     const [paymentType, setPaymentType] = useState('')
     const [eleorder,setEleorder]=useState('')
-     const handleSubmit = (e) => {
-const value = e.target.value
+
+const handleSubmit = (e) => {
+    const value = e.target.value
     setPaymentType(value)
-    switch (paymentType) {
-        case '1':setEleorder(<FaMoneyCheck/>)
-            break;
-        case '2': setEleorder(<SiGooglepay/>)
-             break;
-         case '3': setEleorder(<FaRegMoneyBillAlt/>)
-             break; 
-        default:setEleorder(<FaRegMoneyBillAlt/>)
-            break;
+    switch (value) {
+      case "1":
+        setEleorder(<FaMoneyCheck size={40} />)
+        setPaymentstatus(true)
+        break
+      case "2":
+        setEleorder(<SiGooglepay size={40} />)
+        setPaymentstatus(true)
+        break
+      case "3":
+        setEleorder(<FaRegMoneyBillAlt size={40} />)
+        setPaymentstatus(true)
+        break
+      default:
+        setEleorder(<FaRegMoneyBillAlt size={40} />)
+        break
     }
   }
 function handleorder(){
-        if(login){
-          navigate('/orderdone')
-        }else{
+   if (!paymentstatus){
+            alert("Select Payment Type")
+
+      }else if(login){
+           navigate('/orderdone')
+        }
+  
+       if(!login&&paymentstatus){
           navigate('/signin')
         }
 }
+console.log(login);
+
+function handlereducecount(){
+  if(ordercount==1){
+    setOrdercount(1)
+  }
+  else setOrdercount(pre=>pre-1)
+}
+function handleincresecount(){
+  if(ordercount>=20){
+    setOrdercount(20)
+  }
+  else setOrdercount(pre=>pre+1)
+}
+
 
   return (
     <div>
@@ -49,8 +78,8 @@ function handleorder(){
           </div>
            
             <h1 className='mt-6 text-2xl font-bold md:pl-18 lg:pl-25'>Deilvery Address</h1>
-            <p className='text-lg font-bold mt-2  md:pl-20 lg:pl-25'>{customerdata?customerdata.name:'No Account'}</p>
-            <p className='mt-2  md:pl-20 lg:pl-25'>{customerdata?customerdata.address:'NONE'}</p>
+            <p className='text-lg font-bold mt-2  md:pl-20 lg:pl-25'>{customerdata.name}</p>
+            <p className='mt-2  md:pl-20 lg:pl-25'>{customerdata.address}</p>
             <div className=' md:pl-20 lg:pl-25'>
                 <button className='mt-4 border-2 text-2xl font-medium p-3 rounded-4xl w-60'><Link to='/customeraddres'>Edit Address</Link></button>
             </div>
@@ -64,9 +93,9 @@ function handleorder(){
             <p>{ordershow.keyword}</p>
             </div>
             <div className='flex '>
-            <button className='text-lg' onClick={()=>setOrdercount((pre)=>pre-1)}>-</button>
+            <button className='text-lg' onClick={()=>handlereducecount()}>-</button>
             <p className='text-center m-auto text-2xl'>{ordercount}</p>
-            <button className='text-lg' onClick={()=>setOrdercount((pre)=>pre+1)}>+</button>
+            <button className='text-lg' onClick={()=>handleincresecount()}>+</button>
         </div>
         </div>
        </div>
@@ -87,16 +116,16 @@ function handleorder(){
        </div>
         <div className='flex p-5 justify-around'>
      <h1 className='text-4xl text-[#C67C4E]'>{eleorder}</h1>
-      <select
-        id="paymentType"
-        value={paymentType}
+
+            <select
         onChange={handleSubmit}
-        className='p-3 outline-none'
+        value={paymentType}
+        className="border p-2 rounded"
       >
-        <option value="">--select--</option>
-        <option value="1">Cash/Wallet</option>
-        <option value="2">Credit Card</option>
-        <option value="3">UPI</option>
+        <option value="">Select Payment Type</option>
+        <option value="3">Cash on Delivery</option>
+        <option value="2">Google Pay</option>
+        <option value="1">Card</option>
       </select>
         </div>
         <div className='flex justify-center'>

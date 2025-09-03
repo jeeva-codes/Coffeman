@@ -8,7 +8,7 @@ function Allproduct() {
     
   return (
     <div>
-            <div className='mt-20 md:mt-60 lg:mt-60 flex justify-center'>
+            <div className='mt-20 md:mt-30 lg:mt-60 flex justify-center '>
 <div className="inline-flex rounded-md shadow-xs" role="group">
   <button type="button" onClick={()=>setShowproduct(Productdata.coffee)} className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent  rounded-2xl hover:bg-amber-600 hover:text-white focus:z-10  focus:bg-amber-600 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700">
     Coffee

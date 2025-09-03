@@ -29,6 +29,8 @@ function Signin() {
           // Optionally redirect or show success
           if(rel.message==="Login successful"){
             setLogin(true)
+             sessionStorage.setItem('loginstatus',true)
+              alert(" Login Successful !")
             navigate(-1)
           }
          

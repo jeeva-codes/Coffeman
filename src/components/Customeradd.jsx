@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
 import {useNavigate } from 'react-router-dom';
+import { Productcontext } from '../Context';
 
 function Customeradd() {
+const {customerdata,setCustomerdata}=useContext(Productcontext)
   const navigate=useNavigate()
   const [customerData, setCustomerData] = useState({
     name: '',
@@ -19,6 +22,7 @@ function Customeradd() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setCustomerdata(customerData)
    localStorage.setItem('customeraddressdata', JSON.stringify(customerData))
    navigate(-1)
    

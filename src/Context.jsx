@@ -26,16 +26,15 @@ switch (action.type) {
         break;
 }
     }
-const [login,setLogin]=useState(false)
-useEffect(()=>{
- sessionStorage.setItem('/loginstatus',login)
-},[login])
+    const islogin= sessionStorage.getItem('loginstatus')||false
+const [login,setLogin]=useState(islogin)
+// useEffect(()=>{
+//  sessionStorage.setItem('/loginstatus',login)
+// },[login])
 
-
+const storeddata=JSON.parse(localStorage.getItem('customeraddressdata')) || { name: 'NO name',address: 'none'}
 const [state,dispatch]=useReducer(reduce,[])
- const [customerdata, setCustomerdata] = useState(() => {
-  return JSON.parse(localStorage.getItem('customeraddressdata')) || {};
-});
+ const [customerdata, setCustomerdata] = useState(storeddata);
 
   return (
         <Productcontext.Provider value={{state,dispatch,customerdata,setCustomerdata,login,setLogin}}>
